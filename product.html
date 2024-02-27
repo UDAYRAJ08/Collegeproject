@@ -1,0 +1,620 @@
+<?php
+session_start();
+require 'check_if_added.php';
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="img/lifestyleStore.png" />
+<title>Lifestyle Store</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- latest compiled and minified CSS -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+<!-- jquery library -->
+<script type="text/javascript" src="bootstrap/js/jquery-3.2.1.min.js"></script>
+<!-- Latest compiled and minified javascript -->
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<!-- External CSS -->
+<link rel="stylesheet" href="product.css" type="text/css">
+
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="sign" href="signup.html">Sign Up</a></li>
+          </ul>
+        </nav>
+      </header>
+<div>
+<?php
+require 'header.php';
+?>
+<div class="container">
+<div class="jumbotron">
+<h1>Welcome to our LifeStyle Store!</h1>
+<p>We have the best cameras, watches and shirts for you. No need to hunt
+around, we have all in one place.</p>
+</div>
+</div>
+<div class="container">
+
+<div class="row">
+<!-- <div class="col-md-3 col-sm-6">
+<div class="thumbnail">
+<a href="cart.php">
+<img class="one" src="https://rukminim2.flixcart.com/image/416/416/jfbfde80/camera/n/r/n/canon-eos-eos-3000d-dslr-original-imaf3t5h9yuyc5zu.jpeg?q=70&crop=false" alt="Cannon">
+</a> -->
+<div class="product-container">
+    <div class="product-card">
+      <img class="one" src="https://www.tanotis.com/cdn/shop/products/sony_ilce_7m3k_b_alpha_a7_iii_mirrorless_1519695934000_1394219_800x.jpg?v=1576014781" alt="Cannon EOS">
+      <h2>Cannon EOS</h2>
+      <p>Price: Rs. 36000.00</p>
+      <button>Add to cart</button>
+      <?php if(!isset($_SESSION['email'])){ ?>
+        <p><a href="login.php" role="button" class="btn btn-primary
+        btn-block">Buy Now</a></p>
+        <?php
+        }
+        else{
+        if(check_if_added_to_cart(2)){
+        echo '<a href="#" class=btn btn-block btn-success
+        disabled>Added to cart</a>';
+        }else{
+        ?>
+        <a href="cart_add.php?id=2" class="btn btn-block btnprimary" name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+        <?php
+        }   
+        }
+        ?>
+    </div>
+    <div class="product-card">
+      <img src="https://i.gadgets360cdn.com/products/cameras/large/1548234813_832_sony_slt-a58y-20-1mp-dslr-camera.jpg?downsize=*:180" alt="Sony DSLR">
+      <h2>Sony DSLR</h2>
+      <p>Price: Rs. 40000.00</p>
+      <button>Add to cart</button>
+      <?php if(!isset($_SESSION['email'])){ ?>
+        <p><a href="login.php" role="button" class="btn btn-primary
+        btn-block">Buy Now</a></p>
+        <?php
+        }
+        else{
+        if(check_if_added_to_cart(2)){
+        echo '<a href="#" class=btn btn-block btn-success
+        disabled>Added to cart</a>';
+        }else{
+        ?>
+        <a href="cart_add.php?id=2" class="btn btn-block btnprimary" name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+        <?php
+        }   
+        }
+        ?>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/81lghf1fdzL.SX522.jpg" alt="Sony DSLR">
+      <h2>Sony DSLR</h2>
+      <p>Price: Rs. 50000.00</p>
+      <button>Add to cart</button>
+      <?php if(!isset($_SESSION['email'])){ ?>
+        <p><a href="login.php" role="button" class="btn btn-primary
+        btn-block">Buy Now</a></p>
+        <?php
+        }
+        else{
+        if(check_if_added_to_cart(2)){
+        echo '<a href="#" class=btn btn-block btn-success
+        disabled>Added to cart</a>';
+        }else{
+        ?>
+        <a href="cart_add.php?id=2" class="btn btn-block btnprimary" name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+        <?php
+        }   
+        }
+        ?>
+    </div>
+    <div class="product-card">
+      <img src="https://rukminim2.flixcart.com/image/416/416/l3hmwsw0/dslr-camera/e/5/4/tg-6-red-with-16gb-card-12-tg-6-olympus-original-imagehpht6frydhz.jpeg?q=70&crop=false" alt="Olympus DSLR">
+      <h2>Olympus DSLR</h2>
+      <p>Price: Rs. 80000.00</p>
+      <button>Add to cart</button>
+      <?php if(!isset($_SESSION['email'])){ ?>
+        <p><a href="login.php" role="button" class="btn btn-primary
+        btn-block">Buy Now</a></p>
+        <?php
+        }
+        else{
+        if(check_if_added_to_cart(2)){
+        echo '<a href="#" class=btn btn-block btn-success
+        disabled>Added to cart</a>';
+        }else{
+        ?>
+        <a href="cart_add.php?id=2" class="btn btn-block btnprimary" name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+        <?php
+        }   
+        }
+        ?>
+    </div>
+  </div>
+
+<center>
+<!-- <div class="caption">
+<h3>Cannon EOS</h3>
+<p>Price: Rs. 36000.00</p>
+<?php if(!isset($_SESSION['email'])){ ?>
+<p><a href="login.php" role="button" class="btn btn-primary
+btn-block">Buy Now</a></p>
+<?php
+}
+else{
+if(check_if_added_to_cart(1)){
+echo '<a href="#" class=btn btn-block btn-success
+disabled>Added to cart</a>';
+}else{
+?>
+<a href="cart_add.php?id=1" class="btn btn-block btnprimary" name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+<?php
+}
+}
+?>
+</div>
+</center>
+</div>
+</div>
+<!-- <div class="col-md-3 col-sm-6">
+<div class="thumbnail">
+<a href="cart.php">
+
+<img class="two" src="https://www.tanotis.com/cdn/shop/products/sony_ilce_7m3k_b_alpha_a7_iii_mirrorless_1519695934000_1394219_800x.jpg?v=1576014781" alt="Sony DSLR">
+</a> -->
+<!-- <div class="product-container">
+    <div class="product-card">
+      <img src="https://www.tanotis.com/cdn/shop/products/sony_ilce_7m3k_b_alpha_a7_iii_mirrorless_1519695934000_1394219_800x.jpg?v=1576014781" alt="Cannon EOS">
+      <h2>Cannon EOS</h2>
+      <p>Price: Rs. 36000.00</p>
+      <button>Add to cart</button>
+      <?php if(!isset($_SESSION['email'])){ ?>
+        <p><a href="login.php" role="button" class="btn btn-primary
+        btn-block">Buy Now</a></p>
+        <?php
+        }
+        else{
+        if(check_if_added_to_cart(2)){
+        echo '<a href="#" class=btn btn-block btn-success
+        disabled>Added to cart</a>';
+        }else{
+        ?>
+        <a href="cart_add.php?id=2" class="btn btn-block btnprimary" name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+        <?php
+        }   
+        }
+        ?>
+    </div>
+<center>
+<div class="caption">
+<h3>Sony DSLR</h3>
+<p>Price: Rs. 40000.00</p>
+<?php if(!isset($_SESSION['email'])){ ?>
+<p><a href="login.php" role="button" class="btn btn-primary
+btn-block">Buy Now</a></p>
+<?php
+}
+else{
+if(check_if_added_to_cart(2)){
+echo '<a href="#" class=btn btn-block btn-success
+disabled>Added to cart</a>';
+}else{
+?>
+<a href="cart_add.php?id=2" class="btn btn-block btnprimary" name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+<?php
+}   
+}
+?>
+</div>
+</center>
+</div>
+</div> -->
+<!-- <div class="col-md-3 col-sm-6">
+<div class="thumbnail">
+<a href="cart.php">
+<img class="three" src="https://m.media-amazon.com/images/I/81lghf1fdzL.SX522.jpg" alt="Sony DSLR">
+</a> -->
+<!-- <div class="product-container">
+    <div class="product-card">
+      <img src="https://www.tanotis.com/cdn/shop/products/sony_ilce_7m3k_b_alpha_a7_iii_mirrorless_1519695934000_1394219_800x.jpg?v=1576014781" alt="Cannon EOS">
+      <h2>Cannon EOS</h2>
+      <p>Price: Rs. 36000.00</p>
+      <button>Add to cart</button>
+    </div>
+<center>
+<div class="caption">
+<h3>Sony DSLR</h3>
+
+<p>Price: Rs. 50000.00</p>
+<?php if(!isset($_SESSION['email'])){ ?>
+<p><a href="login.php" role="button" class="btn btn-primary
+btn-block">Buy Now</a></p>
+<?php
+}
+else{
+if(check_if_added_to_cart(3)){
+echo '<a href="#" class=btn btn-block btn-success
+disabled>Added to cart</a>';
+}else{
+?>
+<a href="cart_add.php?id=3" class="btn btn-block btnprimary" name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+<?php
+}
+}
+?>
+</div>
+</center>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="thumbnail">
+<a href="cart.php">
+<img class="four" src="https://rukminim2.flixcart.com/image/416/416/l3hmwsw0/dslr-camera/e/5/4/tg-6-red-with-16gb-card-12-tg-6-olympus-original-imagehpht6frydhz.jpeg?q=70&crop=false" alt="Olympus">
+</a>
+<center>
+<div class="caption">
+<h3>Olympus DSLR</h3>
+<p>Price: Rs. 80000.00</p>
+<?php if(!isset($_SESSION['email'])){ ?>
+<p><a href="login.php" role="button" class="btn btn-primary
+btn-block">Buy Now</a></p>
+<?php
+
+}
+else{
+if(check_if_added_to_cart(4)){
+echo '<a href="#" class=btn btn-block btn-success
+disabled>Added to cart</a>';
+}else{
+?>
+<a href="cart_add.php?id=4" class="btn btn-block btnprimary " name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+<?php
+}
+}
+?>
+</div>
+</center>
+</div>
+</div>
+</div>  -->
+<div class="row">
+    <div class="product-container">
+        <div class="product-card1">
+          <img src="https://m.media-amazon.com/images/I/714YH8eu33L.SY741.jpg" alt="titan301">
+          <h2>Titan 301</h2>
+          <p>Price: Rs. 36000.00</p>
+          <button>Add to cart</button>
+          <?php if(!isset($_SESSION['email'])){ ?>
+            <p><a href="login.php" role="button" class="btn btn-primary
+            btn-block">Buy Now</a></p>
+            <?php
+            }
+            else{
+            if(check_if_added_to_cart(5)){
+            
+            echo '<a href="#" class=btn btn-block btn-success
+            disabled>Added to cart</a>';
+            }else{
+            ?>
+        </div>
+        <div class="product-card1">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2023/9/348074938/IZ/EY/AW/21862520/hmt-wrist-watch-1000x1000.jpg" alt="hmt milan">
+          <h2>HMT Milan</h2>
+          <p>Price: Rs. 4000.00</p>
+          <button>Add to cart</button>
+          <?php if(!isset($_SESSION['email'])){ ?>
+            <p><a href="login.php" role="button" class="btn btn-primary
+            btn-block">Buy Now</a></p>
+            <?php
+            }
+            else{
+            if(check_if_added_to_cart(5)){
+            
+            echo '<a href="#" class=btn btn-block btn-success
+            disabled>Added to cart</a>';
+            }else{
+            ?>
+        </div>
+        <div class="product-card1">
+          <img src="https://dev.favre-leuba.com/media/catalog/product/cache/b45a4be2d3a70f769c6482a2d9bede01/f/a/favre-leuba-raider-sea-sky-00-10103-08-15-31.png" alt="favre-leuba">
+          <h2>FAVER LEUBA</h2>
+          <p>Price: Rs. 5000.00</p>
+          <button>Add to cart</button>
+          <?php if(!isset($_SESSION['email'])){ ?>
+            <p><a href="login.php" role="button" class="btn btn-primary
+            btn-block">Buy Now</a></p>
+            <?php
+            }
+            else{
+            if(check_if_added_to_cart(5)){
+            
+            echo '<a href="#" class=btn btn-block btn-success
+            disabled>Added to cart</a>';
+            }else{
+            ?>
+        </div>
+        <div class="product-card1">
+          <img src="https://www.myraymond.com/media/product/XMSS11767-B5/XMSS11767-B5%20(1).webp" alt="Raymond Shirts">
+          <h2>Raymond Shirts</h2>
+          <p>Price: Rs. 8000.00</p>
+          <button>Add to cart</button>
+          <?php if(!isset($_SESSION['email'])){ ?>
+            <p><a href="login.php" role="button" class="btn btn-primary
+            btn-block">Buy Now</a></p>
+            <?php
+            }
+            else{
+            if(check_if_added_to_cart(5)){
+            
+            echo '<a href="#" class=btn btn-block btn-success
+            disabled>Added to cart</a>';
+            }else{
+            ?>
+        </div>
+      </div>
+
+<!-- <div class="col-md-3 col-sm-6">
+<div class="thumbnail">
+<a href="cart.php">
+<img class="five" src="img/titan301.jpg" alt="Titan 301">
+</a>
+<center>
+<div class="caption">
+<h3>Titan Model #301</h3>
+<p>Price: Rs. 13000.00</p>
+<?php if(!isset($_SESSION['email'])){ ?>
+<p><a href="login.php" role="button" class="btn btn-primary
+btn-block">Buy Now</a></p>
+<?php
+}
+else{
+if(check_if_added_to_cart(5)){
+
+echo '<a href="#" class=btn btn-block btn-success
+disabled>Added to cart</a>';
+}else{
+?>
+<a href="cart_add.php?id=5" class="btn btn-block btnprimary " name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+<?php
+}
+}
+?>
+</div>
+</center>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="thumbnail">
+<a href="cart.php">
+<img class="six" src="img/titan201.jpg" alt="Titan 201">
+</a>
+<center>
+<div class="caption">
+<h3>Titan Model #201</h3>
+<p>Price: Rs. 3000.00</p>
+<?php if(!isset($_SESSION['email'])){ ?>
+<p><a href="login.php" role="button" class="btn btn-primary
+btn-block">Buy Now</a></p>
+<?php
+}
+else{
+if(check_if_added_to_cart(6)){
+echo '<a href="#" class=btn btn-block btn-success
+disabled>Added to cart</a>';
+}else{
+?>
+
+<a href="cart_add.php?id=6" class="btn btn-block btnprimary " name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+<?php
+}
+}
+?>
+</div>
+</center>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="thumbnail">
+<a href="cart.php">
+<img class="seven" src="img/hmt.JPG" alt="htm milan">
+</a>
+<center>
+<div class="caption">
+<h3>HMT Milan</h3>
+<p>Price: Rs. 8000.00</p>
+<?php if(!isset($_SESSION['email'])){ ?>
+<p><a href="login.php" role="button" class="btn btn-primary
+btn-block">Buy Now</a></p>
+<?php
+}
+else{
+if(check_if_added_to_cart(7)){
+echo '<a href="#" class=btn btn-block btn-success
+disabled>Added to cart</a>';
+}else{
+?>
+<a href="cart_add.php?id=7" class="btn btn-block btnprimary " name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+<?php
+}
+}
+
+?>
+</div>
+</center>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="thumbnail">
+<a href="cart.php">
+<img class="eight" src="img/favreleuba.jpg" alt="Favre Leuba">
+</a>
+<center>
+<div class="caption">
+<h3>Favre Leuba #111</h3>
+<p>Price: Rs. 18000.00</p>
+<?php if(!isset($_SESSION['email'])){ ?>
+<p><a href="login.php" role="button" class="btn btn-primary
+btn-block">Buy Now</a></p>
+<?php
+}
+else{
+if(check_if_added_to_cart(8)){
+echo '<a href="#" class=btn btn-block btn-success
+disabled>Added to cart</a>';
+}else{
+?>
+<a href="cart_add.php?id=8" class="btn btn-block btnprimary " name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+<?php
+}
+}
+?>
+</div> -->
+<!-- </center> -->
+<!-- </div>
+</div>
+
+</div>
+<div class="row">
+<div class="col-md-3 col-sm-6">
+<div class="thumbnail">
+<a href="cart.php">
+<img class="nine" src="img/raymond.jpg" alt="Raymond shirt">
+</a> -->
+<!-- <center>
+<div class="caption">
+<h3>Raymond</h3>
+<p>Price: Rs. 1500.00</p>
+<?php if(!isset($_SESSION['email'])){ ?>
+<p><a href="login.php" role="button" class="btn btn-primary
+btn-block">Buy Now</a></p>
+<?php
+}
+else{
+if(check_if_added_to_cart(9)){
+echo '<a href="#" class=btn btn-block btn-success
+disabled>Added to cart</a>';
+}else{
+?>
+<a href="cart_add.php?id=9" class="btn btn-block btnprimary " name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+<?php
+}
+}
+?>
+</div>
+</center>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="thumbnail">
+<a href="cart.php">
+
+<img class="tenth" src="img/charles.jpg" alt="Charles shirt">
+</a>
+<center>
+<div class="caption">
+<h3>Charles</h3>
+<p>Price: Rs. 1000.00</p>
+<?php if(!isset($_SESSION['email'])){ ?>
+<p><a href="login.php" role="button" class="btn btn-primary
+btn-block">Buy Now</a></p>
+<?php
+}
+else{
+if(check_if_added_to_cart(10)){
+echo '<a href="#" class=btn btn-block btn-success
+disabled>Added to cart</a>';
+}else{
+?>
+<a href="cart_add.php?id=10" class="btn btn-block btnprimary " name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+<?php
+}
+}
+?>
+</div>
+</center>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="thumbnail">
+<a href="cart.php">
+<img class="eleventh" src="img/HXR.jpg" alt="HXR">
+</a>
+<center>
+<div class="caption">
+<h3>HXR</h3>
+
+<p>Price: Rs. 900.00</p>
+<?php if(!isset($_SESSION['email'])){ ?>
+<p><a href="login.php" role="button" class="btn btn-primary
+btn-block">Buy Now</a></p>
+<?php
+}
+else{
+if(check_if_added_to_cart(11)){
+echo '<a href="#" class=btn btn-block btn-success
+disabled>Added to cart</a>';
+}else{
+?>
+<a href="cart_add.php?id=11" class="btn btn-block btnprimary " name="add" value="add" class="btn btn-block btr-primary">Add to cart</a>
+<?php
+}
+}
+?>
+</div>
+</center>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="thumbnail">
+<a href="cart.php">
+<img class="twelth" src="img/pink.jpg" alt="PINK">
+</a>
+<center>
+<div class="caption">
+<h3>PINK</h3>
+<p>Price: Rs. 1200.00</p>
+<?php if(!isset($_SESSION['email'])){ ?>
+<p><a href="login.php" role="button" class="btn btn-primary
+btn-block">Buy Now</a></p>
+<?php
+
+}
+else{
+if(check_if_added_to_cart(12)){
+echo '<a href="#" class=btn btn-block btn-success
+disabled>Added to cart</a>';
+}else{
+?>
+<a href="cart_add.php?id=12" class="btn btn-block btnprimary " name="add" value="add" class="btn btn-block btr-primary">Add to cart</a> -->
+<?php
+}
+}
+?>
+</div>
+</center>
+</div>
+</div>
+</div>
+</div>
+<br><br><br><br><br><br><br><br>
+<footer class="footer">
+<div class="container">
+<center>
+<p>Copyright &copy Lifestyle Store. All Rights Reserved. | Contact Us: +91
+90000 00000</p>
+<p>This website is developed by Uday Prajjwal Writwik</p>
+</center>
+</div>
+</footer>
+</div>
+</body>
+</html>

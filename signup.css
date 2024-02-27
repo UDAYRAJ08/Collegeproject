@@ -1,0 +1,42 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .panel-primary {
+    border-color: #337ab7;
+  }
+  
+  .panel-primary .panel-heading {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+  }
+  
+  .panel-primary .form-group {
+    margin-bottom: 20}
+   
+    header {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+    
+    header ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header li {
+      margin: 0 10px;
+    }
+    
+    header a {
+      color: #fff;
+      text-decoration: none;
+    }

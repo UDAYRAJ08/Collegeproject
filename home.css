@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    width: 100vw;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header li {
+    margin: 0 10px;
+  }
+  
+  header a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  padding: 3px 200px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    color: #000000;
+}
+  
+  #hero::before{
+    content: "";
+    background: url("ads.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 80%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+  }
+  
+  #hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  #hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  #hero .cta-button {
+    background-color: #f04;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #products {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+      color: #000000;
+  }
+  #products{
+    width: 100%;
+    height: 70%;
+  }
+  #products.ioo{
+    width: 100%;
+    height: 50%;
+  }
+  /* #products {
+    background-color: #f5f5f5;
+    padding: 20px;
+    width: 70%;
+    height: 50%;
+  }
+  
+  #products h2 {
+    font-size: 30px;
+ }
+
+ /* #products .op img{
+  width: 100%;
+  height: 70%;
+   */
+   footer{
+    text-align: center;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+   }
+
